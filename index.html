@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trabalho de Redes</title>
+</head>
+<body>
+<h1>Redes 3a VA</h1>
+
+<b>Leonardo Ribeiro</b>
+
+<h3>Introdução</h3>
+<p>Essa documentação tem como objetivo dar informações relevantes e básicas referentes a <br/>
+   comunfiguração de servidor Ubuntu Server com DHCP, NAT, DNS(cache e autoritativo), Apache e SSH.</p>
+
+<h3>Topologia Física</h3>
+<h4>Topologia Física - Formato estrela</h4>
+<img src="img/topologia-fisica.png" alt="Topologia Física">
+
+<h3>Topologia Lógica</h3>
+<h4>Topologia lógica - Broadcast</h4>
+<img src="img/topologia-logica.png" alt="Topologia Lógica">
+
+<h3>Acesso ao servidor</h3>
+
+<p>
+    Username: leoribeiro<br/>
+    Senha: nuirg9tf130721,
+</p>
+
+<h3>Interfaces de rede</h3>
+
+<h5>eth0</h5>
+<b>IP estático</b>: 10.0.0.1 <br/>
+<b>net mask</b>: 255.255.255.0 <br/>
+<b>network</b>: 10.0.0.0 <br/>
+<b>broadcast</b>: 10.0.0.255<br/>
+<b>dns-nameserver</b>: 10.0.0.1<br/>
+
+<h5>eth1</h5>
+<b>IP estático</b>: 192.168.10.121<br/>
+<b>netmask</b>: 255.255.255.0<br/>
+<b>gateway</b>: 192.168.10.253<br/>
+
+<h3>DHCP</h3>
+<b>Intervalo de IP:</b> 10.0.0.40 a 10.0.0.50<br/>
+<b>Domain name:</b> leoribeiro.com.br<br/>
+<b>Tempo padrão:</b> 600ms<br/>
+<b>Tempo máximo</b> 7200ms<br/>
+
+<h3>NAT</h3>
+<h5>Tabela de roteamento</h5>
+<b>POSTROUTING</b> habiltado<br/>
+<b>MASQUERADE</b> habiltado
+
+<h3>Interface de saída</h3>
+eth1<br/>
+
+<h3>DNS-Cache</h3>
+<b>Porta</b> 53<br/>
+Permite que todos os clientes façam consulta
+
+<h3>DNS-Autoritativo</h3>
+<b>Porta</b> 53 <br/>
+Permite que todos os clientes façam consulta
+
+<h3>SSH</h3>
+Acesso permitido via SSH pela porta 22
+
+<h3>HTTP-APACHE</h3>
+Disponível pelo IP: 192.168.10.121, porta 80<br/>
+Disponível pelo domínio: leoribeiro.com.br
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "TrabalhoRedesDocumentacao",
+  "homepage": "https://github.com/leodsgn/TrabalhoRedesDocumentacao",
+  "authors": [
+    "Leonardo Ribeiro <leoribeiro.dsgn@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
